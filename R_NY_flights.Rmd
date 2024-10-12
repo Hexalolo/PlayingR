@@ -1,0 +1,61 @@
+---
+title: "R_NY"
+author: "Tomasz Kisiel"
+date: "2024-10-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This is a simple project aiming to show R skills. Through this project I will share basic skills of loading and formatting data. Multiple tables are joined and grouped in order to present complete summary and explicit statistics. At the end, data are presented in graphics  
+
+Used database is provided with R package for flights departed in 2013 from New York City. 
+
+```{r Reading data}
+#install.packages("nycflights13")
+library(nycflights13)
+summary(airlines)
+summary(flights)
+
+```
+
+## Data correction
+
+This section present data changes in order to facilitate further analysis.
+
+```{r data correction}
+### code to be added
+
+```
+
+## Data collections
+
+This section present initial grouped statistics.
+
+```{r grouped statistics}
+### code to be added
+
+```
+
+## Table join
+
+This section aims to join multiple tables .
+
+```{r table join}
+### code to be added
+
+```
+
+## Graphs
+
+This section presents main graphics.
+
+```{r graphs, echo=FALSE}
+### code to be added
+
+```
+
