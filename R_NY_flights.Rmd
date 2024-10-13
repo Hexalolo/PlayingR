@@ -15,22 +15,47 @@ This is a simple project aiming to show R skills. Through this project I will sh
 
 Used database is provided with R package for flights departed in 2013 from New York City. 
 
-```{r Reading data}
+```{r Reading data, echo=FALSE}
 #install.packages("nycflights13")
 library(nycflights13)
-summary(airlines)
 summary(flights)
-
+summary(airlines)
+summary(airports)
+summary(planes)
+summary(weather)
 ```
+There were 336776 flights. 
+The longest one was of 4983 miles but the shortest one was only 17 miles.
+The longest time in air was of 695 minutes but the shortest one was only 20 minutes long.
+Regarding maximum delay it was of 1301 minutes. On the other hand, the earliest departure was 43 minutes before scheduled time.
+
+Flights were served by 16 carriers.
+
+There were 1458 destinations. 
+
+Through the New York City airport there passed 3322 different planes. 
+The oldest one was manufactured in 1956 and the newest one was from 2013.
+The largest plane was designed to carry 450 passengers but the smallest one was only for 2.
+The average cruising speed was of 236.8 mph.
+
+The strongest wind during take off or landing was 1048 mph but the average one was only 10 mph.
+The strongest precipitations were of 1,21 inch.
+Mean visibility was of 9,2 miles but the worst one was of 0,0 miles.
 
 ## Data correction
 
 This section present data changes in order to facilitate further analysis.
 
 ```{r data correction}
-### code to be added
-
+na_qty <- sum(is.na(airlines),
+    is.na(airports),
+    is.na(flights),
+    is.na(planes),
+    is.na(weather))
+na_qty
 ```
+
+Total quantity of NA values is 73941.
 
 ## Data collections
 
